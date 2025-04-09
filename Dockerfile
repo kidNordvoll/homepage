@@ -1,6 +1,6 @@
 FROM python:3.10-slim
 
-WORKDIR /code
+WORKDIR /app
 
 #Install system packages
 RUN apt update && apt install -y gcc --no-install-recommends

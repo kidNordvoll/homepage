@@ -2,12 +2,9 @@ services:
   web:
     build: .
     container_name: homepage
-    command: >
-      sh -c "pipenv run python manage.py migrate &&
-             pipenv run python manage.py collectstatic --noinput &&
-             pipenv run python manage.py runserver 0.0.0.0:8000"
+    command: ["/app/entrypoint.sh"]
     volumes:
-      - .:/code
+      - .:/app
     ports:
       - "8000:8000"
     env_file:
