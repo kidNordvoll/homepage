@@ -26,7 +26,7 @@ DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.nordvolldev.com', 'nordvolldev.com']
 
 
 # Application definition
