@@ -13,12 +13,3 @@ services:
     env_file:
       - .env
   
-  nginx:
-    image: nginx:latest
-    container_name: nginx
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx/conf:/etc/nginx/conf.d
-    depends_on:
-      - web
