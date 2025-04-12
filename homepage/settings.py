@@ -30,7 +30,8 @@ ALLOWED_HOSTS = ['www.nordvolldev.com',
     'nordvolldev.com', 
     'localhost', 
     '127.0.0.1', 
-    'homarr.nordvolldev.com']
+    'homarr.nordvolldev.com',
+    'vikunja.nordvolldev.com']
 
 
 # Application definition
