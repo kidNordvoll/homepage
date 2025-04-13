@@ -7,4 +7,4 @@ echo "Collecting static files..."
 pipenv run python manage.py collectstatic --noinput
 
 echo "Starting server..."
-pipenv run python manage.py runserver 0.0.0.0:8000
+pipenv run gunicorn homepage.wsgi:application --bind 0.0.0.0:8000
