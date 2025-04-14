@@ -1,0 +1,16 @@
+{# Extends the base template #}
+{% extends "base.html" %}
+
+{# Overrides the title block from base.html #}
+{% block title %}My Homepage{% endblock %}
+
+{# Overrides the content block from base.html #}
+{% block content %}
+
+    {# Full-screen centered content using Bootstrap classes #}
+    <div class="min-vh-100 d-flex flex-column justify-content-center align-items-center">
+        <h1 class="display-1">Features</h1>
+        <h2 class="display-4">Test aaaa</h2>
+    </div>
+
+{% endblock %}
