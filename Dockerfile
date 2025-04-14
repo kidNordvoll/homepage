@@ -3,7 +3,7 @@ FROM python:3.12-slim
 WORKDIR /app
 
 #Install system packages
-RUN apt update && apt install -y gcc --no-install-recommends
+RUN apt update && apt install -y gcc python3-dev build-essential --no-install-recommends
 
 #Install pipenv and dependencies
 COPY Pipfile Pipfile.lock ./
