@@ -19,8 +19,9 @@ jobs:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: |
-          cd /home/stefan/homepage
+        script:
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/nordvolldev-to-github
           git pull origin main
           docker compose down
           docker compose build --no-cache
