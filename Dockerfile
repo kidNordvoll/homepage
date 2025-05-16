@@ -10,5 +10,7 @@ COPY Pipfile Pipfile.lock ./
 RUN pip install pipenv && pipenv install --deploy --ignore-Pipfile
 
 # Copy the rest of the project
-
 COPY . .
+
+# Collect static files
+RUN python manage.py collectstatic --noinput
