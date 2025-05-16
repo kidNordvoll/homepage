@@ -1,5 +1,49 @@
-<div class="min-vh-5 d-flex flex-column justify-content-center align-items-center">
+{# Modern footer with multiple sections and social links #}
+<footer class="bg-dark text-light py-4 mt-auto">
+    <div class="container">
+        <div class="row">
+            {# Company Info Section #}
+            <div class="col-md-4 mb-3">
+                <h5 class="mb-3">NordvollDev</h5>
+                <p class="text-muted">Building innovative solutions for the digital world.</p>
+            </div>
 
-    <h2>Footer</h2>
+            {# Quick Links Section #}
+            <div class="col-md-4 mb-3">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'index' %}" class="text-muted text-decoration-none">Home</a></li>
+                    <li><a href="{% url 'features' %}" class="text-muted text-decoration-none">Features</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">About</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
 
-</div>
+            {# Social Links Section #}
+            <div class="col-md-4 mb-3">
+                <h5 class="mb-3">Connect With Us</h5>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-muted text-decoration-none">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" class="text-muted text-decoration-none">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-muted text-decoration-none">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {# Copyright Section #}
+        <div class="row mt-3">
+            <div class="col-12">
+                <hr class="bg-secondary">
+                <p class="text-center text-muted mb-0">
+                    &copy; {% now "Y" %} NordvollDev. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,5 +1,6 @@
 {# Extends the base template #}
 {% extends "base.html" %}
+{% load static %}
 
 {# Overrides the title block from base.html #}
 {% block title %}My Homepage{% endblock %}
@@ -9,8 +10,7 @@
 
     {# Full-screen centered content using Bootstrap classes #}
     <div class="min-vh-100 d-flex flex-column justify-content-center align-items-center">
-        <h1 class="display-1">Hello World</h1>
-        <h2 class="display-4">Test</h2>
+        <img class="img-fluid" src="{% static 'page/images/ayaz-lalani-no-EShQ7s1A-unsplash.jpg' %}" alt="front page image">
     </div>
 
 {% endblock %}
