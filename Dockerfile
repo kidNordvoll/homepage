@@ -13,4 +13,4 @@ RUN pip install pipenv && pipenv install --deploy --ignore-Pipfile
 COPY . .
 
 # Collect static files
-RUN python manage.py collectstatic --noinput
+RUN pipenv run python manage.py collectstatic --noinput
